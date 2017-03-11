@@ -1,0 +1,25 @@
+#!/bin/sh
+export PATH=/usr/local/bin:$PATH
+
+FILES=$(git diff --cached --name-only --diff-filter=ACMR "*.js" | sed 's| |\\ |g')
+[ -z "$FILES" ] && exit 0
+
+if ! command -v nfmt &> /dev/null
+then
+  npm i -gfs nfmt &> /dev/null
+  if [ $? -ne 0 ]
+  then
+    echo "nfmt could not be installed"
+    exit 1
+  fi
+fi
+
+nfmt &> /dev/null
+if [ $? -eq 0 ]
+then
+  echo "$FILES" | xargs git add
+  exit 0
+fi
+
+echo "There was a problem formating the code in the repo with 'nfmt'.\nPlease run 'nfmt' to see the formatting output." >&2
+exit 1

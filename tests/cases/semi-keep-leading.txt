@@ -1,0 +1,32 @@
+Should keep important semi
+-----------------------------------
+a()['x'].for();
+a();[].for();
+a();
+[].for();
+
+[1,2,3].for();
+const x = a => a;
+const x = a;
+
+const x = function () {
+  a();
+
+  [].for();
+}
+-----------------------------------
+a()['x'].for()
+a()
+;[].for()
+a()
+;[].for()
+
+;[1, 2, 3].for()
+const x = a => a
+const x = a
+
+const x = function() {
+  a()
+
+  ;[].for()
+}

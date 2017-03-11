@@ -1,0 +1,20 @@
+Sould format end parens
+-----------------------------------
+(d) =>    a.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa(b)
+      .aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa(
+        (
+          b
+          ) =>
+
+         !c.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa(e).f() ? g(current)
+
+          : h.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa(current));
+-----------------------------------
+d =>
+  a
+    .aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa(b)
+    .aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa(
+      b =>
+        !c.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa(e).f()
+          ? g(current)
+          : h.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa(current))
