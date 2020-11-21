@@ -1,8 +1,8 @@
 const compose = require('./compose')
-const prettier = require('prettier')
+const formatter = require('./~formatter')
 
 const prettify = (source, filepath) =>
-  prettier.format(source, {
+  formatter.format(source, {
     printWidth: 100,
     tabWidth: 2,
     singleQuote: true,

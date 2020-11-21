@@ -1,6 +1,6 @@
 {
   "name": "nfmt",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "Opinionated javascript formatter inspired by golang fmt.",
   "homepage": "https://github.com/pre63/nfmt",
   "license": "Apache-2.0",
@@ -12,9 +12,6 @@
   },
   "scripts": {
     "test": "node ./tests/index.js",
-    "nfmt:add-hook": "yarn global add --force && cp .githooks/* .git/hooks/ && chmod +x .git/hooks/*"
-  },
-  "dependencies": {
-    "prettier": "1.14.3"
+    "nfmt:add-hook": "yarn global add nfmt --force && cp .githooks/* .git/hooks/ && chmod +x .git/hooks/*"
   }
 }

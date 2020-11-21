@@ -10,6 +10,9 @@ const walker = lastRunTime => dir => {
     if (/node_modules/g.test(d)) {
       return
     }
+    if (/~.+/g.test(d)) {
+      return
+    }
     try {
       const files = fs.readdirSync(d)
       files.forEach(file => {
