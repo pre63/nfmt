@@ -48,7 +48,7 @@ const plural = count => (count === 1 ? '' : 's')
 
 const setLastRunTime = path => {
   try {
-    write(path)(Date.now())
+    write(path)(Date.now() + '')
   } catch (e) {
     console.error('Could not write last save time file:' + path)
   }
